@@ -90,7 +90,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
                 case R.id.action_add_favourite:
                     Toast.makeText(mContext, "Add to favourite", Toast.LENGTH_SHORT).show();
                     return true;
-                case R.id.action_play_next:
+                case R.id.action_unread:
                     Toast.makeText(mContext, "Play next", Toast.LENGTH_SHORT).show();
                     return true;
                 default:

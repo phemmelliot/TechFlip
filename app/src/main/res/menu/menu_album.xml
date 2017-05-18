@@ -7,7 +7,7 @@
         android:title="@string/action_add_favourite" />
 
     <item
-        android:id="@+id/action_play_next"
+        android:id="@+id/action_unread"
         android:orderInCategory="101"
-        android:title="@string/action_play_next" />
+        android:title="Add to Unread" />
 </menu>
