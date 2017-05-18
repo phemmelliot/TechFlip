@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ilab" default="all">
+  
+  
+  <property file="ilab.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.ear"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.animated-vector-drawable-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/b4703c4201b1a29ec0514e5dc193018a909fe037/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/b4703c4201b1a29ec0514e5dc193018a909fe037/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.appcompat-v7-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/7119f484a9f94f907f90702837c4cc8c48a9b407/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/7119f484a9f94f907f90702837c4cc8c48a9b407/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.cardview-v7-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/ab09d2bf010728d86429f651a78ba566222cf017/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/ab09d2bf010728d86429f651a78ba566222cf017/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.constraint-layout-1.0.1.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/bb3dc4496ffd1e9565b6cd7679794e474bc2cac9/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/bb3dc4496ffd1e9565b6cd7679794e474bc2cac9/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.constraint-layout-solver-1.0.1.classpath">
+    <pathelement location="${basedir}/../../Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.1/constraint-layout-solver-1.0.1.jar"/>
+  </path>
+  
+  <path id="library.design-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/7156f7d4630943d41101733ea47ab9f0e5ff1466/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/7156f7d4630943d41101733ea47ab9f0e5ff1466/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.espresso-core-2.2.2.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/562ee9d2a1508a2aabcf1ad9eb2b7b009c9e20e5/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/562ee9d2a1508a2aabcf1ad9eb2b7b009c9e20e5/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.espresso-idling-resource-2.2.2.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/524334f83810be55fd387ed3ee59013102a824fc/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/524334f83810be55fd387ed3ee59013102a824fc/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.exposed-instrumentation-api-publish-0.5.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/3059ee52d0df2988121014f222fc8a16c9e5ba43/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/3059ee52d0df2988121014f222fc8a16c9e5ba43/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.fastadapter-1.8.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/f2dda7929685b8fbd798cc716793e0c3a56e06ee/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/f2dda7929685b8fbd798cc716793e0c3a56e06ee/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.glide-3.7.0.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"/>
+  </path>
+  
+  <path id="library.hamcrest-core-1.3.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar"/>
+  </path>
+  
+  <path id="library.hamcrest-integration-1.3.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-integration/1.3/5de0c73fef18917cd85d0ab70bb23818685e4dfd/hamcrest-integration-1.3.jar"/>
+  </path>
+  
+  <path id="library.hamcrest-library-1.3.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/4785a3c21320980282f9f33d0d1264a69040538f/hamcrest-library-1.3.jar"/>
+  </path>
+  
+  <path id="library.iconics-core-2.8.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/df115ac03144419719d30e241d092108f5c6c8ff/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/df115ac03144419719d30e241d092108f5c6c8ff/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.javawriter-2.1.1.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.1.1/67ff45d9ae02e583d0f9b3432a5ebbe05c30c966/javawriter-2.1.1.jar"/>
+  </path>
+  
+  <path id="library.javax.annotation-api-1.2.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.2/479c1e06db31c432330183f5cae684163f186146/javax.annotation-api-1.2.jar"/>
+  </path>
+  
+  <path id="library.javax.inject-1.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"/>
+  </path>
+  
+  <path id="library.jsr305-2.0.1.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar"/>
+  </path>
+  
+  <path id="library.junit-4.12.classpath">
+    <pathelement location="${basedir}/../../.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar"/>
+  </path>
+  
+  <path id="library.materialdrawer-5.6.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/75c585ea4e0d0caec1c3a3a9b52276268a052145/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/75c585ea4e0d0caec1c3a3a9b52276268a052145/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.materialize-1.0.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/06f744f0a7ea5c22ed3c2ccc5b5a54c7ad8a2fc3/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/06f744f0a7ea5c22ed3c2ccc5b5a54c7ad8a2fc3/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.recyclerview-v7-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/f6f53ba12a032c5ad3f9495cd24bf66e1c5d0dfb/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/f6f53ba12a032c5ad3f9495cd24bf66e1c5d0dfb/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.rules-0.5.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/3364d802b28aa6d716891749d93a30df025c4510/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/3364d802b28aa6d716891749d93a30df025c4510/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.runner-0.5.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/694731bfe516317fef1f97feaade912e20cae68d/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/694731bfe516317fef1f97feaade912e20cae68d/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.support-annotations-25.2.0.classpath">
+    <pathelement location="${basedir}/../../Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"/>
+  </path>
+  
+  <path id="library.support-compat-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/26aae64934e0d609a705d5cc000971fafc4e8136/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/26aae64934e0d609a705d5cc000971fafc4e8136/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.support-core-ui-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/f209c6cb9085fe799fde1602329626546dcbcef4/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/f209c6cb9085fe799fde1602329626546dcbcef4/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.support-core-utils-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/b5de02de84ef7b0416bec0aabfb09f891b4efac5/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/b5de02de84ef7b0416bec0aabfb09f891b4efac5/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.support-fragment-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/ae76992b36fabd001cce77a24b71127a0a13c36a/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/ae76992b36fabd001cce77a24b71127a0a13c36a/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.support-media-compat-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/8510ce52606156e92677027399a34450fe93c04a/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/8510ce52606156e92677027399a34450fe93c04a/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.support-v4-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/fe496123105275d2ec39c0cbb09f84ec391f7280/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/fe496123105275d2ec39c0cbb09f84ec391f7280/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.support-vector-drawable-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/da859e983f5f163a8c6e6c12bc5bb5f15308911f/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/da859e983f5f163a8c6e6c12bc5bb5f15308911f/output/jars/classes.jar"/>
+  </path>
+  
+  <path id="library.transition-25.2.0.classpath">
+    <pathelement location="${basedir}/../../.android/build-cache/a4a9bf28504398dd651653c83d60ed6692711f41/output/res"/>
+    <pathelement location="${basedir}/../../.android/build-cache/a4a9bf28504398dd651653c83d60ed6692711f41/output/jars/classes.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/app/module_app.xml"/>
+  
+  <import file="${basedir}/module_ilab.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.app, clean.module.ilab" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.app, compile.module.ilab" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>

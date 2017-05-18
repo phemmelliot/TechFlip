@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_margin="16dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/album_title_padding"
+                        android:paddingRight="@dimen/album_title_padding"
+                        android:paddingTop="@dimen/album_title_padding"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        tools:text="@string/title"/>
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:textSize="20sp"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        tools:ellipsize="end"
+                        tools:maxLines="3"
+                        tools:text="Here contains a bit about what you, if u scale, if u like dont"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/lay"
+                    android:layout_marginTop="5dp"
+                    >
+                    <ImageView
+                        android:id="@+id/overflow"
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerCrop"
+                        android:paddingLeft="16dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/ic_dots" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="500dp"
+                android:layout_height="150dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:layout_weight="2"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                tools:adjustViewBounds="true"
+                tools:src="@drawable/album1"/>
+        </LinearLayout>
+
+
+
+
+</LinearLayout>
